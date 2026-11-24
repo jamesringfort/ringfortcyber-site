@@ -3,16 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ringfort Cyber · Launching Soon</title>
-<meta name="description" content="Ringfort Cyber. Launching soon.">
+<title>Ringfort Cyber · Cyber security for Irish businesses</title>
+<meta name="description" content="Cyber security for Irish businesses.">
 <!-- Holding page only: no scripts, no trackers, no outside fonts. Images are our own logo files. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#14233D">
+<!-- How the link looks when shared (LinkedIn, WhatsApp, email) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ringfort Cyber">
+<meta property="og:title" content="Ringfort Cyber">
+<meta property="og:description" content="Cyber security for Irish businesses.">
+<meta property="og:url" content="https://ringfortcyber.ie/">
+<meta property="og:image" content="https://ringfortcyber.ie/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
+  /* Brand font (Space Grotesk, SIL Open Font Licence), served from our own site */
+  @font-face { font-family:"Space Grotesk"; font-weight:600; font-style:normal; font-display:swap;
+               src:url("/fonts/space-grotesk-latin-600-normal.woff2") format("woff2"); }
   /* Brand colours from the logo kit README */
   :root { --navy:#14233D; --navy-2:#0E1A2E; --teal:#5FC2C2; --gold:#D4A24C; --text:#E8ECF1; --muted:#9AA7B6; }
   * { box-sizing:border-box; }
@@ -30,7 +44,9 @@
     background-attachment:fixed;
   }
   main { flex:1; display:flex; align-items:center; padding:48px 8vw; }
-  .wrap { max-width:640px; }
+  .wrap { max-width:640px; animation:rise .9s ease-out both; }
+  @keyframes rise { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce) { .wrap { animation:none; } }
   .logo { display:block; width:280px; max-width:70vw; height:auto; margin:0 0 56px -11px; } /* the logo file has a little built-in padding; this lines it up with the text */
   .kicker {
     margin:0 0 18px;
@@ -38,6 +54,7 @@
     font-size:13px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
   }
   h1 {
+    font-family:"Space Grotesk", "Segoe UI", system-ui, sans-serif;
     margin:0 0 28px;
     font-size:clamp(32px, 5vw, 52px); line-height:1.12; font-weight:600; letter-spacing:-.015em;
     color:#fff;
@@ -50,17 +67,20 @@
   }
   .contact a:hover, .contact a:focus { color:#fff; border-bottom-color:#fff; }
   footer { padding:24px 8vw; color:#6F7F92; font-size:13px; letter-spacing:.02em; }
+  footer .sep { margin:0 10px; }
+  footer a { color:#8FA0B4; text-decoration:none; }
+  footer a:hover, footer a:focus { color:#fff; }
 </style>
 </head>
 <body>
 <main>
   <div class="wrap">
     <img class="logo" src="ringfort-cyber-logo-white.svg" alt="Ringfort Cyber" width="280" height="72">
-    <h1>Launching Soon</h1>
+    <h1>Cyber security for Irish businesses.</h1>
     <hr class="rule">
-    <p class="contact">Get in touch: <a href="mailto:james@ringfortcyber.ie">james@ringfortcyber.ie</a></p>
+    <p class="contact">Our new website is on its way. Contact: <a href="mailto:james@ringfortcyber.ie">james@ringfortcyber.ie</a></p>
   </div>
 </main>
-<footer>© 2026 Ringfort Cyber</footer>
+<footer>© 2026 Ringfort Cyber<span class="sep">·</span><a href="https://www.linkedin.com/company/ringfortcyber/" rel="noopener">LinkedIn</a></footer>
 </body>
 </html>
