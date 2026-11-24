@@ -3,51 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ringfort Cyber · Launching February 2027</title>
-<meta name="description" content="Ringfort Cyber helps Irish small businesses with cyber security and GDPR. Launching February 2027.">
+<title>Ringfort Cyber</title>
+<meta name="description" content="Cyber security and GDPR for Irish businesses. Launching February 2027.">
 <!-- Holding page only: no scripts, no trackers, no outside fonts. Images are our own logo files. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#14233D">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="referrer" content="strict-origin-when-cross-origin">
 <style>
-  :root { --navy:#14233D; --gold:#B8862A; --teal:#1D7373; --ink:#1d2433; --muted:#5a6475; --bg:#f5f6f8; }
+  /* Brand colours from the logo kit README */
+  :root { --navy:#14233D; --navy-2:#0E1A2E; --teal:#5FC2C2; --gold:#D4A24C; --text:#E8ECF1; --muted:#9AA7B6; }
   * { box-sizing:border-box; }
   html, body { margin:0; height:100%; }
-  body { background:var(--bg); color:var(--ink); font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; display:flex; flex-direction:column; }
-  header { background:var(--navy); border-bottom:4px solid var(--gold); padding:16px 24px; }
-  header img { display:block; height:60px; width:auto; }
-  main { flex:1; display:flex; align-items:center; justify-content:center; padding:32px 20px; }
-  .card { background:#fff; max-width:620px; width:100%; border-radius:14px; border-top:4px solid var(--gold); box-shadow:0 2px 14px rgba(20,33,61,.08); padding:36px 32px; }
-  .kicker { color:var(--teal); font-weight:700; font-size:13px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 8px; }
-  h1 { font-size:32px; line-height:1.2; margin:0 0 14px; color:var(--navy); }
-  p { margin:0 0 14px; }
-  ul { margin:0 0 18px; padding-left:20px; }
-  li { margin:4px 0; }
-  .contact { margin-top:22px; padding-top:18px; border-top:1px solid #e3e6eb; }
-  a.btn { display:inline-block; background:var(--teal); color:#fff; text-decoration:none; font-weight:700; padding:12px 20px; border-radius:8px; }
-  a.btn:hover, a.btn:focus { background:#155c5c; }
-  .small { color:var(--muted); font-size:14px; margin-top:12px; }
-  footer { text-align:center; color:var(--muted); font-size:13px; padding:18px; }
+  body {
+    min-height:100%;
+    display:flex; flex-direction:column;
+    color:var(--text);
+    font:16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    background:
+      /* faint concentric rings, a nod to the ringfort in the logo */
+      repeating-radial-gradient(circle at 88% 110%, rgba(95,194,194,.07) 0 1px, transparent 1px 46px),
+      radial-gradient(ellipse at 15% 0%, #1c3152 0%, transparent 60%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    background-attachment:fixed;
+  }
+  main { flex:1; display:flex; align-items:center; padding:48px 8vw; }
+  .wrap { max-width:640px; }
+  .logo { display:block; width:280px; max-width:70vw; height:auto; margin:0 0 56px -11px; } /* the logo file has a little built-in padding; this lines it up with the text */
+  .kicker {
+    margin:0 0 18px;
+    color:var(--gold);
+    font-size:13px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  }
+  h1 {
+    margin:0 0 28px;
+    font-size:clamp(32px, 5vw, 52px); line-height:1.12; font-weight:600; letter-spacing:-.015em;
+    color:#fff;
+  }
+  .rule { width:56px; height:2px; background:var(--gold); border:0; margin:0 0 28px; }
+  .contact { margin:0; color:var(--muted); font-size:16px; }
+  .contact a {
+    color:var(--teal); text-decoration:none; font-weight:600;
+    border-bottom:1px solid rgba(95,194,194,.4); padding-bottom:2px;
+  }
+  .contact a:hover, .contact a:focus { color:#fff; border-bottom-color:#fff; }
+  footer { padding:24px 8vw; color:#6F7F92; font-size:13px; letter-spacing:.02em; }
 </style>
 </head>
 <body>
-<header><img src="ringfort-cyber-logo-white.svg" alt="Ringfort Cyber" width="232" height="60"></header>
 <main>
-  <div class="card">
+  <div class="wrap">
+    <img class="logo" src="ringfort-cyber-logo-white.svg" alt="Ringfort Cyber" width="280" height="72">
     <p class="kicker">Launching February 2027</p>
-    <h1>Practical cyber security and GDPR for Irish small businesses</h1>
-    <p>Ringfort Cyber helps small and medium businesses in Ireland protect their systems, their customers' data and their reputation, in plain English and without the jargon.</p>
-    <ul>
-      <li>Cyber security health checks</li>
-      <li>GDPR and NIS2 supplier readiness</li>
-      <li>Ongoing monitoring and support</li>
-    </ul>
-    <div class="contact">
-      <p>Our full website is on the way. In the meantime, we'd be glad to hear from you.</p>
-      <a class="btn" href="mailto:james@ringfortcyber.ie">Email james@ringfortcyber.ie</a>
-    </div>
+    <h1>Cyber security and GDPR for Irish businesses.</h1>
+    <hr class="rule">
+    <p class="contact">Get in touch: <a href="mailto:james@ringfortcyber.ie">james@ringfortcyber.ie</a></p>
   </div>
 </main>
 <footer>© 2026 Ringfort Cyber</footer>
