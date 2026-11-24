@@ -78,17 +78,30 @@
   .rule { margin:0 auto 32px; }
   .contact { font-size:18px; }
   footer { text-align:center; }
+  /* Layout (24 Nov): logo top-left, heading centred, contact bottom-left */
+  header.top { padding:32px 8vw 0; }
+  header.top .logo { width:230px; margin:0 0 0 -9px; }
+  footer { display:flex; justify-content:space-between; align-items:center; gap:12px 24px; flex-wrap:wrap; text-align:left; padding:28px 8vw; }
+  footer .email { color:var(--muted); font-size:15px; }
+  footer .email a { color:var(--teal); font-weight:600; border-bottom:1px solid rgba(95,194,194,.4); padding-bottom:2px; }
+  footer .email a:hover, footer .email a:focus { color:#fff; border-bottom-color:#fff; }
+  @media (max-width:560px) { header.top .logo { width:190px; } footer { flex-direction:column; align-items:flex-start; } }
 </style>
 </head>
 <body>
+<header class="top">
+  <img class="logo" src="ringfort-cyber-logo-white.svg" alt="Ringfort Cyber" width="230" height="59">
+</header>
 <main>
   <div class="wrap">
-    <img class="logo" src="ringfort-cyber-logo-white.svg" alt="Ringfort Cyber" width="280" height="72">
     <h1>Cyber Security For Irish Businesses</h1>
     <hr class="rule">
-    <p class="contact">Our new website is on its way. Contact: <a href="mailto:james@ringfortcyber.ie">james@ringfortcyber.ie</a></p>
+    <p class="contact">Our new website is on its way.</p>
   </div>
 </main>
-<footer>© 2026 Ringfort Cyber<span class="sep">·</span><a href="https://www.linkedin.com/company/ringfortcyber/" rel="noopener">LinkedIn</a></footer>
+<footer>
+  <span class="email">Contact: <a href="mailto:james@ringfortcyber.ie">james@ringfortcyber.ie</a></span>
+  <span class="legal">© 2026 Ringfort Cyber<span class="sep">·</span><a href="https://www.linkedin.com/company/ringfortcyber/" rel="noopener">LinkedIn</a></span>
+</footer>
 </body>
 </html>
