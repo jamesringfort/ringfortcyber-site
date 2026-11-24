@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ringfort Cyber · Launching February 2027</title>
 <meta name="description" content="Ringfort Cyber helps Irish small businesses with cyber security and GDPR. Launching February 2027.">
-<!-- Holding page only: no scripts, no trackers, no outside fonts or images. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<!-- Holding page only: no scripts, no trackers, no outside fonts. Images are our own logo files. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <style>
-  :root { --navy:#14213d; --gold:#c9a227; --teal:#0f7b7b; --ink:#1d2433; --muted:#5a6475; --bg:#f5f6f8; }
+  :root { --navy:#14233D; --gold:#B8862A; --teal:#1D7373; --ink:#1d2433; --muted:#5a6475; --bg:#f5f6f8; }
   * { box-sizing:border-box; }
   html, body { margin:0; height:100%; }
   body { background:var(--bg); color:var(--ink); font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; display:flex; flex-direction:column; }
-  header { background:var(--navy); border-bottom:4px solid var(--gold); padding:18px 24px; }
-  .logo { color:#fff; font-weight:800; font-size:22px; letter-spacing:.01em; }
-  .logo span { color:var(--gold); }
+  header { background:var(--navy); border-bottom:4px solid var(--gold); padding:16px 24px; }
+  header img { display:block; height:60px; width:auto; }
   main { flex:1; display:flex; align-items:center; justify-content:center; padding:32px 20px; }
   .card { background:#fff; max-width:620px; width:100%; border-radius:14px; border-top:4px solid var(--gold); box-shadow:0 2px 14px rgba(20,33,61,.08); padding:36px 32px; }
   .kicker { color:var(--teal); font-weight:700; font-size:13px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 8px; }
@@ -25,13 +27,13 @@
   li { margin:4px 0; }
   .contact { margin-top:22px; padding-top:18px; border-top:1px solid #e3e6eb; }
   a.btn { display:inline-block; background:var(--teal); color:#fff; text-decoration:none; font-weight:700; padding:12px 20px; border-radius:8px; }
-  a.btn:hover, a.btn:focus { background:#0b6262; }
+  a.btn:hover, a.btn:focus { background:#155c5c; }
   .small { color:var(--muted); font-size:14px; margin-top:12px; }
   footer { text-align:center; color:var(--muted); font-size:13px; padding:18px; }
 </style>
 </head>
 <body>
-<header><div class="logo">Ringfort <span>Cyber</span></div></header>
+<header><img src="ringfort-cyber-logo-white.svg" alt="Ringfort Cyber" width="232" height="60"></header>
 <main>
   <div class="card">
     <p class="kicker">Launching February 2027</p>
@@ -45,7 +47,6 @@
     <div class="contact">
       <p>Our full website is on the way. In the meantime, we'd be glad to hear from you.</p>
       <a class="btn" href="mailto:james@ringfortcyber.ie">Email james@ringfortcyber.ie</a>
-      <p class="small">Based in Greystones, Co. Wicklow.</p>
     </div>
   </div>
 </main>
